@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+void Invertir(int num[100],int n){
+	int a;
+	for(int i=0;i<n/2;i++){
+		a=num[i];
+		num[i]=num[n-1-i];
+		num[n-1-i]=a;
+	}
+}
+void InvertirR(int num[100],int  n){
+	if(n>=0){
+		cout<<num[n]<<" ";
+	InvertirR(num,n-1);
+	}
+}
+void mostrar(int num[100],int n){
+	for(int i=0;i<n;i++){
+		cout<<num[i]<<" ";
+	}
+}
+
+int main(){
+	int num[100];
+	int n;
+	int s;
+	cout<<"Ingrese cantidad";
+	cin>>n;
+	for(int i=0;i<n;i++){
+		cout<<"digite numeros";
+		cin>>num[i];
+	}
+	//Invertir(num,n);
+	//mostrar(num,n);
+	InvertirR(num,n);
+	//mostrar(num,n);
+} 
